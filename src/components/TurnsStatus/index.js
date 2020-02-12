@@ -44,7 +44,7 @@ const TurnsStatus = ({ game }) => (
         </StyledStatusElementValue>
       </StyledStatusElement>
 
-      <StyledStatusElement className={game.turnsLeft <= 5 && 'fewTurnsLeft'}>
+      <StyledStatusElement className={game.currentTurn >= 15 && 'fewTurnsLeft'}>
         <StyledStatusElementHeader>Current</StyledStatusElementHeader>
         <StyledStatusElementValue>{game.currentTurn}</StyledStatusElementValue>
       </StyledStatusElement>

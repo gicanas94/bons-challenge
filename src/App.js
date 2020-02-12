@@ -15,18 +15,21 @@ const StyledWrapper = styled.div`
 `;
 
 const App = () => {
-  const [game, setGame] = useState(JSON.parse(localStorage.getItem('game')) || null);
+  const [game, setGame] = useState(
+    JSON.parse(localStorage.getItem('game')) || null,
+  );
+
   const [error, setError] = useState(null);
   const [modal, setModal] = useState(null);
 
   const [
     createGameMutation,
-    { loading: createGameMutationIsLoading }
+    { loading: createGameMutationIsLoading },
   ] = useMutation(CREATE_GAME_MUTATION);
 
   const [
     nextTurnMutation,
-    { loading: nextTurnMutationIsLoading }
+    { loading: nextTurnMutationIsLoading },
   ] = useMutation(NEXT_TURN_MUTATION);
 
   return (

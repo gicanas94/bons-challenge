@@ -108,8 +108,8 @@ const PlayerCards = ({
       disabled={nextTurnMutationIsLoading || playerIsHorrified}
       title="YOUR CARDS"
     >
-    {isScrollableToLeft && <StyledLeftScrollShadow />}
-    {isScrollableToRight && <StyledRightScrollShadow />}
+      {isScrollableToLeft && <StyledLeftScrollShadow />}
+      {isScrollableToRight && <StyledRightScrollShadow />}
 
       <StyledCardsWrapper onWheel={handleOnWheel} ref={cardsWrapperRef}>
         {cards.map(card => (

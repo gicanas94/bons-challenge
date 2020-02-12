@@ -11,7 +11,7 @@ const STRINGS_FOR_LOGGING = {
     SHIELD: 'You recovered SHIELD by $value points.',
   },
   NEUTRAL: {
-    WELCOME: 'Welcome $value! The idea of the game is simple: you must beat your opponent and prevent him from beating you before running out of turns. Good luck 👋',
+    WELCOME: 'Welcome $value! The idea of the game is simple: you must beat your opponent and prevent him from beating you before running out of turns. I could never do that, that\'s why you see a button to simulate it, just to test. Good luck 👋',
   },
 };
 

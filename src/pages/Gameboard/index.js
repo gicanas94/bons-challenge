@@ -45,6 +45,15 @@ const StyledPlayerCardsAndButtonWrapper = styled.div`
   width: 100%;
 `;
 
+const StyledButtonsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  button:first-of-type {
+    margin-bottom: 15px;
+  }
+`;
+
 const GameboardPage = ({
   game,
   nextTurnMutation,
@@ -153,6 +162,22 @@ const GameboardPage = ({
     })();
   }
 
+  const handleOnSimulateWinButtonClick = () => {
+    console.log({
+
+      ...game,
+      monster: {
+        hp: 0,
+      },
+    });
+    checkIfGameCanEnd({
+      ...game,
+      monster: {
+        hp: 0,
+      },
+    });
+  }
+
   return (
     <StyledGridWrapper>
       <StyledTurnsAndPlayersStatusWrapper>
@@ -180,14 +205,24 @@ const GameboardPage = ({
           setSelectedCardHandler={setSelectedCard}
         />
 
-        <Button
-          color="#69d470"
-          disabled={nextTurnMutationIsLoading}
-          height="100%"
-          onClick={() => handleOnEndTurnButtonClick()}
-        >
-          END TURN
-        </Button>
+        <StyledButtonsWrapper>
+          <Button
+            color="#69d470"
+            disabled={nextTurnMutationIsLoading}
+            height="100%"
+            onClick={() => handleOnEndTurnButtonClick()}
+          >
+            END TURN
+          </Button>
+
+          <Button
+            color="#69c4d4"
+            height="100%"
+            onClick={() => handleOnSimulateWinButtonClick()}
+          >
+            SIMULATE WIN
+          </Button>
+        </StyledButtonsWrapper>
       </StyledPlayerCardsAndButtonWrapper>
     </StyledGridWrapper>
   )
