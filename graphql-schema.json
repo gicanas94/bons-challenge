@@ -1,0 +1,65 @@
+type Card {
+  id: ID
+  value: Int
+  effect: String
+}
+
+type Game {
+  id: ID
+  currentTurn: Int
+  maxTurns: Int
+  turnsLeft: Int
+  player: Player
+  monster: Monster
+}
+
+input GameCreateInput {
+  name: String
+}
+
+input GameNextTurnInput {
+  gameId: ID
+  cardId: ID
+}
+
+input GameQueryInput {
+  id: String
+}
+
+type Monster {
+  id: ID
+  name: String
+  hp: Int
+  maxHp: Int
+  shield: Int
+  image: String
+}
+
+type MonsterEffect {
+  effect: String
+  value: Int
+}
+
+type Mutation {
+  createGame(input: GameCreateInput!): Game
+  nextTurn(input: GameNextTurnInput!): NextTurn
+}
+
+type NextTurn {
+  game: Game
+  monsterEffect: MonsterEffect
+}
+
+type Player {
+  id: ID
+  name: String
+  hp: Int
+  maxHp: Int
+  shield: Int
+  cards: [Card]
+}
+
+type Query {
+  game(input: GameQueryInput!): Game
+}
+
