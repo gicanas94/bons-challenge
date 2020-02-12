@@ -21,4 +21,4 @@ $ npm install
 $ npm start
 ```
 
-**5.** Try to beat the monster. I couldn't do it.
+**5.** Try to beat the monster. I couldn't do it 🙄
