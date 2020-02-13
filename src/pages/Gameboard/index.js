@@ -163,13 +163,6 @@ const GameboardPage = ({
   }
 
   const handleOnSimulateWinButtonClick = () => {
-    console.log({
-
-      ...game,
-      monster: {
-        hp: 0,
-      },
-    });
     checkIfGameCanEnd({
       ...game,
       monster: {
