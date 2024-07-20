@@ -1,6 +1,6 @@
-# Bons Challenge
+# Bons.io interview challenge
 
-This app uses version 13.8.0 of Node.js.
+Bons.io interview challenge developed in React.js. This app uses version 13.8.0 of Node.js.
 
 **1.** Clone the repo:
 
